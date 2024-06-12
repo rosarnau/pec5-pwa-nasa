@@ -1,0 +1,26 @@
+<div *ngIf="isLoading" class="spinner">
+  <div class="loading-spinner"></div>
+</div>
+
+<div *ngIf="!isLoading && images.length" class="d-flex justify-content-center">
+  <div class="table-responsive" style="max-width: 80%;">
+    <table class="table table-hover table-sm table-bordered">
+      <thead>
+        <tr>
+          <th scope="col" class="larger-text">Date</th>
+          <th scope="col" class="larger-text">Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let image of dataSource.data" (click)="goToDetail(image)">
+          <td class="larger-text">
+            <div>{{ image.date }}</div>
+            <div>{{ image.title }}</div>
+          </td>
+          <td><img [src]="image.url" class="img-thumbnail" alt="{{ image.title }}" style="height: 50px;"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

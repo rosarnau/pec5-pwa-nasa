@@ -1,0 +1,31 @@
+
+  a{
+    text-decoration: none;
+  }
+
+  a:hover {
+    color:goldenrod;
+  }
+
+  .spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+  }
+  
+  .loading-spinner {
+    border: 13px solid #904290; 
+    border-top: 13px solid goldenrod; 
+    border-bottom: 13px solid #959292;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

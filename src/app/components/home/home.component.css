@@ -1,0 +1,27 @@
+.card-title, .card-text{
+    font-size: 18px;
+    margin: 10px;
+    
+  }
+  
+  
+  a{
+    text-decoration: none;
+    color: #904290;
+    font-size: 16px;
+  
+  }
+
+  a:hover{
+    color:goldenrod;
+  }
+
+  .h2{
+    color: grey;
+    size: 22px;
+   
+  }
+
+  
+  
+  

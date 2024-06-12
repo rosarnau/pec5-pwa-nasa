@@ -1,0 +1,44 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h1 class="h2">Image List for January 2024</h1>
+    <div>
+      <button class="btn btn-outline-secondary me-2" (click)="showGridView()">
+        <span class="material-icons icon-gray">view_module</span>
+      </button>
+      <button class="btn btn-outline-secondary" (click)="showListView()">
+        <mat-icon>view_list</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <div *ngIf="isLoading" class="spinner">
+    <div class="loading-spinner"></div>
+  </div>
+
+  <div *ngIf="!isLoading && isGridView" class="animate__animated animate__fadeIn">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col" *ngFor="let image of images">
+        <div class="card h-100">
+          <a [routerLink]="['/detail', image.date]">
+            <img [src]="image.url" class="card-img-top" alt="{{ image.title }}">
+            <div class="card-body">
+              <p class="card-text">{{ image.date }}</p>
+              <h5 class="card-title">{{ image.title }}</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!isLoading && !isGridView" class="animate__animated animate__bounceInDown">
+    <ul class="list-group">
+      <li *ngFor="let image of images" class="list-group-item list-group-item-action">
+        <a [routerLink]="['/detail', image.date]" class="text-decoration-none">
+          {{ image.date }} - {{ image.title }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
