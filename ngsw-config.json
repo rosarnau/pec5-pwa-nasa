@@ -35,10 +35,10 @@
     {
       "name": "nasa-api",
       "urls": [
-        "https://api.nasa.gov/planetary/apod?api_key=UYyUBpAWcFsepO8kGU6ekrPkvs1c9cxZupe61jKU&date=*"    
+        "https://api.nasa.gov/planetary/apod?api_key=UYyUBpAWcFsepO8kGU6ekrPkvs1c9cxZupe61jKU&date=**"    
       ],
     "cacheConfig": {
-      "maxSize": 50,
+      "maxSize": 31,
       "maxAge": "1h",
       "timeout": "1s",
       "strategy": "freshness"
